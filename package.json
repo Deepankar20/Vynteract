@@ -19,5 +19,10 @@
   "workspaces": [
     "apps/*",
     "packages/*"
-  ]
+  ],
+  "dependencies": {
+    "react-router-dom": "^7.1.2",
+    "video.js": "^8.21.0",
+    "videojs-contrib-hls": "^5.15.0"
+  }
 }
