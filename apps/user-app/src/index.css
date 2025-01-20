@@ -3,16 +3,80 @@
 @tailwind utilities;
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  /* Typography */
+  --font-primary: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-secondary: 'Merriweather', Georgia, serif;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
+  --line-height: 1.6;
+  --letter-spacing: 0.015em;
+
+  /* Colors */
+  --color-bg: #e0e0e0; /* Deep charcoal for background */
+  --color-bg-secondary: ##b0b0b0; /* Slightly lighter for cards and containers */
+  --color-text: #1a1a1a; /* Soft white for text */
+  --color-text-secondary: #2a2a2a; /* Muted gray for secondary text */
+  --color-primary: #5f9df7; /* Cool blue accent for links and buttons */
+  --color-accent: #f79057; /* Warm orange accent for highlights */
+  --color-border: #383838; /* Subtle borders */
+
+  /* Shadows */
+  --shadow-light: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-medium: 0px 4px 8px rgba(0, 0, 0, 0.2);
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+}
+
+body {
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  margin: 0;
+  padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+
+
+.card {
+  background-color: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: 0.5em;
+  padding: 1.5em;
+  box-shadow: var(--shadow-light);
+  transition: box-shadow var(--transition-normal);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-medium);
+}
+
+::-webkit-scrollbar {
+  width: 2px;              /* Width of the scrollbar */
+  height: 2px; 
+  padding: 2px;            /* Height of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #FAF7F5; 
+       /* Background of the scrollbar track */
+   /* Rounded corners for the track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #291334;  
+  height: 5px;       /* Color of the scrollbar thumb */    /* Rounded corners for the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;         /* Color of the scrollbar thumb when hovered */
 }
