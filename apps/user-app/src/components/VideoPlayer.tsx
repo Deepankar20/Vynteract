@@ -71,7 +71,7 @@ const VideoPlayer = ({
   return (
     <div className="relative text-center">
       <div data-vjs-player>
-        <video ref={videoNode} className="video-js" muted></video>
+        <video ref={videoNode} className="video-js rounded-xl overflow-hidden" muted></video>
         <div
           ref={progressBarRef}
           className="vjs-progress-control vjs-control text-red-500"
